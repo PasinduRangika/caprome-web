@@ -1,0 +1,29 @@
+@media (max-width: 1199.98px) {
+  .sec-1 .bottom-conner-sub-img {
+    width: 300px;
+    bottom: 10px;
+  }
+  .sec-1 .top-conner-sub-img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 10px;
+    right: -10px;
+  }
+  .sec-3 .feature-point {
+    width: 100%;
+  }
+  .sec-3 .feature-point-unselected {
+    width: 100%;
+  }
+  .sec-4 .git-wrap img {
+    width: 100%;
+  }
+  .sec-8 .img-warp img {
+    width: 100%;
+    height: auto;
+  }
+  .sec-2 .c-video {
+    width: 500px;
+  }
+}
