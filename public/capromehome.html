@@ -100,14 +100,44 @@
           </div>
         </div>
       </div>
+      <script>
+        document.addEventListener("scroll", function () {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const mainImage = document.querySelector(".hero-main-image");
+          const topImage = document.querySelector(".top-conner-sub-img");
+          const bottomImage = document.querySelector(".bottom-conner-sub-img");
+          const title1 = document.querySelectorAll(".sec-1  .titile-1");
+          const title3 = document.querySelector(".sec-1 .title-3");
+          const requestButton = document.querySelector(".requst-demo-btn");
+          const iconSection = document.querySelector(".icon-section");
+
+          if (mainImage && topImage && bottomImage && title1.length && title3 && requestButton && iconSection) {
+            const scrollSpeed = 0.8;
+            const textMove = scrollTop * 0.5;
+            const iconSectionMove = scrollTop * 0.5;
+
+            mainImage.style.transform = `translateY(-${scrollTop * 0.2}px)`;
+            topImage.style.transform = `translate(${scrollTop * scrollSpeed}px, 0)`;
+            bottomImage.style.transform = `translate(-${scrollTop * scrollSpeed}px, 0)`;
+
+            title1.forEach((title) => {
+              title.style.transform = `translateY(-${textMove}px)`;
+            });
+
+            title3.style.transform = `translateY(-${textMove}px)`;
+            requestButton.style.transform = `translateY(-${textMove}px)`;
+            iconSection.style.transform = `translateY(-${iconSectionMove}px)`;
+          }
+        });
+      </script>
     </section>
     <section class="sec-2">
-      <img src="../wp-content/uploads/cap-13.png" alt="" class="background-left" />
-      <img src="../wp-content/uploads/cap-14.png" alt="" class="background-right" />
+      <img src="../wp-content/uploads/cap-13.png" alt="" class="background-left fade-in-top js-scroll" />
+      <img src="../wp-content/uploads/cap-14.png" alt="" class="background-right fade-in-top js-scroll" />
       <div class="container">
         <div class="row justify-content-center">
           <div
-            class="col-12 col-md-11 video-section"
+            class="col-12 col-md-11 video-section fade-in-bottom js-scroll"
             style="
               background-image: url(&quot;../wp-content/uploads/cap-11.png&quot;);
               background-size: cover;
@@ -117,63 +147,45 @@
             <div class="imag-wrap">
               <img src="../wp-content/uploads/cap-12.png" alt="play" class="play-lap" />
               <div class="video-wrap">
-                <video autoplay muted class="c-video">
+                <video id="videoElement" muted class="c-video">
                   <source src="../wp-content/uploads/c-home-video-2.mp4" type="video/mp4" />
                 </video>
-                <div class="play-button">
-                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="55" height="54" viewBox="0 0 55 54" fill="none">
+                <div class="play-button" id="playButton">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="55" height="54" viewBox="0 0 55 54" fill="none">
                     <circle cx="26.5997" cy="26.1183" r="25.6747" fill="#FF5A5A" />
-                    <g filter="url(#filter0_d_1269_2247)">
-                      <path
-                        d="M19.085 14.2864C19.085 13.5166 19.9184 13.0355 20.585 13.4204L40.2489 24.7734C40.9156 25.1583 40.9156 26.1205 40.2489 26.5054L20.585 37.8584C19.9184 38.2433 19.085 37.7622 19.085 36.9924L19.085 14.2864Z"
-                        fill="white"
-                      />
-                    </g>
-                    <defs>
-                      <filter
-                        id="filter0_d_1269_2247"
-                        x="5.2601"
-                        y="1.43503"
-                        width="49.3138"
-                        height="52.3586"
-                        filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
-                      >
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix
-                          in="SourceAlpha"
-                          type="matrix"
-                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                          result="hardAlpha"
-                        />
-                        <feMorphology
-                          radius="11.8499"
-                          operator="dilate"
-                          in="SourceAlpha"
-                          result="effect1_dropShadow_1269_2247"
-                        />
-                        <feOffset dy="1.97498" />
-                        <feGaussianBlur stdDeviation="0.98749" />
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1269_2247" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1269_2247" result="shape" />
-                      </filter>
-                    </defs>
-                  </svg> -->
+                    <path
+                      d="M19.085 14.2864C19.085 13.5166 19.9184 13.0355 20.585 13.4204L40.2489 24.7734C40.9156 25.1583 40.9156 26.1205 40.2489 26.5054L20.585 37.8584C19.9184 38.2433 19.085 37.7622 19.085 36.9924L19.085 14.2864Z"
+                      fill="white"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <script>
+        const playButton = document.getElementById("playButton");
+        const videoElement = document.getElementById("videoElement");
+
+        playButton.addEventListener("click", () => {
+          if (videoElement.paused) {
+            videoElement.play();
+            playButton.style.display = "none";
+          }
+        });
+
+        videoElement.addEventListener("ended", () => {
+          playButton.style.display = "block";
+        });
+      </script>
     </section>
     <section class="sec-3">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="title-1">Key <span>Features</span></h2>
-            <p class="des">
+            <h2 class="title-1 fade-in-bottom js-scroll">Key <span>Features</span></h2>
+            <p class="des fade-in-bottom js-scroll">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <br class="d-none d-lg-block" />
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
@@ -279,13 +291,13 @@
           </div>
           <div class="col-12 col-md-10 col-lg-6 d-flex justify-content-start justify-content-lg-center">
             <div class="card-right">
-              <h3 class="titile-2">Call Center</h3>
-              <h2 class="titile-1">Coaching</h2>
-              <p class="des">
+              <h3 class="titile-2 fade-in-bottom js-scroll">Call Center</h3>
+              <h2 class="titile-1 fade-in-bottom js-scroll">Coaching</h2>
+              <p class="des fade-in-bottom js-scroll">
                 Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit. Nunc vulputate libero et velit <br />
                 interdum, ac aliquet odio mattis.
               </p>
-              <button class="learn-more-btn">Learn More</button>
+              <button class="learn-more-btn fade-in-bottom js-scroll">Learn More</button>
             </div>
           </div>
         </div>
@@ -296,22 +308,22 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-12 col-lg-6">
             <div class="right">
-              <h3 class="title-2">Raw</h3>
-              <h2 class="title-1">report export</h2>
-              <h4 class="title-3">to use on PowerBI , Looker</h4>
-              <p class="des">
+              <h3 class="title-2 fade-in-bottom js-scroll">Raw</h3>
+              <h2 class="title-1 fade-in-bottom js-scroll">report export</h2>
+              <h4 class="title-3 fade-in-bottom js-scroll">to use on PowerBI , Looker</h4>
+              <p class="des fade-in-bottom js-scroll">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br class="d-none d-lg-block" />
                 Etiam eu turpis molestie, dictum est a, mattis tellus. Sed <br class="d-none d-lg-block" />
                 dignissim, metus nec fringilla accumsan, risus sem <br class="d-none d-lg-block" />
                 sollicitudin lacus, ut interdum tellus elit sed risus. <br class="d-none d-lg-block" />
                 Maecenas eget condimentum velit, sit.
               </p>
-              <div class="icon-section">
+              <div class="icon-section fade-in-bottom js-scroll">
                 <img src="../wp-content/uploads/cap-16.png" class="power-bi" alt="power BI" />
                 <div class="middle-line"></div>
                 <img src="../wp-content/uploads/cap-17.png" class="Looker" alt="Looker" />
               </div>
-              <div class="d-flex justify-content-center justify-content-lg-start">
+              <div class="d-flex justify-content-center justify-content-lg-start fade-in-bottom js-scroll">
                 <button class="learn-more-button">Learn More</button>
               </div>
             </div>
@@ -331,15 +343,15 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h2 class="title-1">Why Choose Caprome for <span>Chromebook</span></h2>
-              <p class="des">
+              <h2 class="title-1 fade-in-bottom js-scroll">Why Choose Caprome for <span>Chromebook</span></h2>
+              <p class="des fade-in-bottom js-scroll">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <br class="d-none d-lg-block" />
                 vulputate libero et velit interdum, ac aliquet odio mattis.
               </p>
             </div>
           </div>
           <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 fade-in-bottom js-scroll">
               <div class="card">
                 <div class="svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -358,7 +370,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 fade-in-bottom js-scroll">
               <div class="card">
                 <div class="svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -377,7 +389,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 fade-in-bottom js-scroll">
               <div class="card">
                 <div class="svg-wrap">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -405,8 +417,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="title-1">Your Security,<span>Our Priority</span></h2>
-            <p class="des">
+            <h2 class="title-1 fade-in-bottom js-scroll">Your Security,<span>Our Priority</span></h2>
+            <p class="des fade-in-bottom js-scroll">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
               <br class="d-none d-lg-block" />
               interdum, ac aliquet odio mattis.
@@ -414,7 +426,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-11 col-md-4">
+          <div class="col-11 col-md-4 fade-in-bottom js-scroll">
             <div class="cards">
               <div class="imag-wrap">
                 <img src="../wp-content/uploads/cap-20.png" alt="data encryption" />
@@ -426,7 +438,7 @@
               </p>
             </div>
           </div>
-          <div class="col-11 col-md-4">
+          <div class="col-11 col-md-4 fade-in-bottom js-scroll">
             <div class="cards">
               <div class="imag-wrap">
                 <img src="../wp-content/uploads/cap-20.png" alt="Privacy Compliance" />
@@ -438,7 +450,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 fade-in-bottom js-scroll">
             <div class="cards">
               <div class="imag-wrap">
                 <img src="../wp-content/uploads/cap-20.png" alt="Secure Storage" />
@@ -458,18 +470,18 @@
         <div class="row middle-card">
           <div class="col-12 col-lg-7">
             <div class="left">
-              <h2 class="title-1">Are you ready for <span>a Demo?</span></h2>
-              <p class="des">
+              <h2 class="title-1 fade-in-bottom js-scroll">Are you ready for <span>a Demo?</span></h2>
+              <p class="des fade-in-bottom js-scroll">
                 Reach out today and let us show you how Caprome can revolutionize <br class="d-none d-xl-block" />
                 your call center operations with a live demo!
               </p>
               <div class="d-flex justify-content-center justify-content-lg-start">
-                <button class="request-btn">Request Demo</button>
+                <button class="request-btn fade-in-bottom js-scroll">Request Demo</button>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-9 col-lg-5">
-            <div class="img-warp">
+            <div class="img-warp fade-in-bottom js-scroll">
               <img src="../wp-content/uploads/cap-21.png" alt="" />
             </div>
           </div>
@@ -580,6 +592,43 @@
             link.classList.add("active");
           }
         });
+      });
+    </script>
+    <script>
+      const scrollElements = document.querySelectorAll(".js-scroll");
+
+      const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+      };
+
+      const elementOutofView = (el) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return elementTop > (window.innerHeight || document.documentElement.clientHeight);
+      };
+
+      const displayScrollElement = (element) => {
+        element.classList.add("scrolled");
+      };
+
+      const hideScrollElement = (element) => {
+        element.classList.remove("scrolled");
+      };
+
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el, 1.25)) {
+            displayScrollElement(el);
+          } else if (elementOutofView(el)) {
+            hideScrollElement(el);
+          }
+        });
+      };
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        handleScrollAnimation();
       });
     </script>
   </body>

@@ -108,7 +108,7 @@ fs.readdir(htmlDirectory, (err, files) => {
         // Crop the content from <header> to <footer>
         if (file !== "index.html") {
           const startPos = data.indexOf("</header>") + 10;
-          const endPos = data.indexOf("<footer ");
+          const endPos = data.indexOf("<footer>");
 
           if (startPos !== -1 && endPos !== -1) {
             htmlContent = data.substring(startPos, endPos);
