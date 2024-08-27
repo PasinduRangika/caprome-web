@@ -105,4 +105,45 @@
   .sec-2 .c-video {
     width: 400px;
   }
+  .sec-9 .title-1 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .sec-9 .des {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .sec-9 .btn-wrap-learn-more {
+    justify-content: center;
+  }
+  .sec-9 .icon-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .sec-9 {
+    padding: 150px 0px 30px 0px;
+  }
+  .sec-10 .title-1 {
+    padding-bottom: 10px;
+  }
+  .sec-10 .des {
+    padding-bottom: 60px;
+  }
+  .sec-10 .top-title {
+    padding-bottom: 14px;
+  }
+  .sec-10 .title {
+    padding-bottom: 20px;
+  }
+  .sec-11 .card-titile {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .sec-11 .card-des {
+    color: #cccbcb;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
 }

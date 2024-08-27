@@ -159,4 +159,74 @@
       }
     }
   }
+
+  .sec-9 .title-1 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .sec-9 .des {
+    font-size: 14px;
+  }
+  .sec-10 .title-1 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .sec-10 .des {
+    font-size: 14px;
+    padding-bottom: 50px;
+    line-height: 18px;
+  }
+  .sec-10 {
+    padding: 60px 0px;
+  }
+  .sec-10 .gift-wrap img {
+    width: 90%;
+    height: auto;
+  }
+  .sec-10 .gift-wrap {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 40px;
+  }
+  .sec-10 .top-title {
+    text-align: center;
+  }
+  .sec-10 .title {
+    text-align: center;
+  }
+  .sec-10 .des-2 {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .sec-11 .title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+  }
+  .sec-11 .card-titile {
+    font-size: 23px;
+    line-height: 23px;
+  }
+  .sec-11 .card-des {
+    color: #cccbcb;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    padding-bottom: 30px;
+  }
+  .sec-12 .title {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 10px;
+  }
+  .sec-12 {
+    padding: 60px 0px 30px 0px;
+  }
+  .sec-12 .des {
+    font-size: 14px;
+    line-height: 14px;
+    padding-bottom: 30px;
+  }
 }
