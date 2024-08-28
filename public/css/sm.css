@@ -229,4 +229,19 @@
     line-height: 14px;
     padding-bottom: 30px;
   }
+  .sec-13 .btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .sec-13 .btn-wrap .c-button {
+    flex: 0 0 48%;
+    margin-bottom: 5px;
+  }
+  .sec-13 .title {
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
