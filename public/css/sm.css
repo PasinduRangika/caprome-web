@@ -241,7 +241,41 @@
     margin-bottom: 5px;
   }
   .sec-13 .title {
-    font-size: 22px;
-    line-height: 22px;
+    line-height: 32px;
+    font-size: 32px;
+  }
+  .sec-14 .des {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .sec-15 {
+    padding: 20px 0px;
+  }
+  .sec-15 .middle-line {
+    border-radius: 0px;
+  }
+  .sec-14 .img-wrap {
+    padding-bottom: 30px;
+  }
+  /* contact form */
+  .sec-14 .forminput {
+    width: 325px !important;
+  }
+  .sec-14 .forminputtext {
+    width: 325px !important;
+  }
+  .sec-14 .formdrown {
+    width: 325px !important;
+  }
+  .sec-14 .file-upload-wrap {
+    width: 325px !important;
+  }
+  .sec-14 .file-upload-wrap-inner {
+    width: 280px;
+  }
+  .wpcf7-checkbox {
+    flex-direction: column;
   }
 }

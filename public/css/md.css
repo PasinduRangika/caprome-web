@@ -161,4 +161,47 @@
     font-weight: 400;
     line-height: 14px;
   }
+  .sec-14 .title {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .sec-14 .des {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .sec-14 .img-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .sec-14 .contact-form-title {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .sec-15 .title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .sec-15 .des {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  /* contact form */
+  .sec-14 .forminput {
+    width: 475px !important;
+  }
+  .sec-14 .forminputtext {
+    width: 475px !important;
+  }
+  .sec-14 .formdrown {
+    width: 475px !important;
+  }
+  .sec-14 .file-upload-wrap {
+    width: 475px !important;
+  }
+  .wpcf7-form-control.wpcf7-radio .wpcf7-list-item-label {
+    width: 150px !important;
+  }
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+    background: #add8e6 !important;
+  }
 }

@@ -29,4 +29,27 @@
   .sec-9 .search-bar {
     width: 90%;
   }
+  .sec-15 .middle-line {
+    padding: 60px 70px;
+  }
+  /* contact form */
+  .sec-14 .forminput {
+    width: 425px !important;
+  }
+  .sec-14.forminputtext {
+    width: 425px !important;
+  }
+  .sec-14 .formdrown {
+    width: 425px !important;
+  }
+  .sec-14.file-upload-wrap {
+    width: 425px !important;
+  }
+
+  .sec-14 .file-upload-wrap-inner {
+    width: 350px;
+  }
+  .wpcf7-form-control.wpcf7-radio .wpcf7-list-item-label {
+    margin-bottom: 10px !important;
+  }
 }
