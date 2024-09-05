@@ -83,7 +83,7 @@
     padding-bottom: 30px;
   }
   .sec-6 .card {
-    height: 300px;
+    height: 350px;
   }
   .sec-8 {
     padding: 0px 0px;
@@ -203,5 +203,24 @@
   }
   .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
     background: #add8e6 !important;
+  }
+
+  /* modal */
+  .modal .forminput {
+    width: 475px !important;
+  }
+  .modal .forminputtext {
+    width: 475px !important;
+  }
+  .modal .formdrown {
+    width: 475px !important;
+  }
+  .modal .file-upload-wrap {
+    width: 475px !important;
+  }
+  .modal-content {
+    width: 80%;
+    border-radius: 30px;
+    max-height: 62vh;
   }
 }

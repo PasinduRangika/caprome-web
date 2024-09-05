@@ -26,6 +26,9 @@
   .sec-2 .c-video {
     width: 500px;
   }
+  .sec-6 .card {
+    height: 290px;
+  }
   .sec-9 .search-bar {
     width: 90%;
   }
@@ -51,5 +54,27 @@
   }
   .wpcf7-form-control.wpcf7-radio .wpcf7-list-item-label {
     margin-bottom: 10px !important;
+  }
+  /* modal */
+  .modal .forminput {
+    width: 425px !important;
+  }
+  .modal .forminputtext {
+    width: 425px !important;
+  }
+  .modal .formdrown {
+    width: 425px !important;
+  }
+  .modal .file-upload-wrap {
+    width: 425px !important;
+  }
+
+  .modal .file-upload-wrap-inner {
+    width: 350px;
+  }
+  .modal-content {
+    width: 60%;
+    border-radius: 30px;
+    max-height: 62vh;
   }
 }
